@@ -1,0 +1,45 @@
+{% extends "to_do/base.html"%}
+{% load static %}
+    {% block link%}
+        <link rel="stylesheet" type="text/css" href="{% static 'users/login.css' %}">
+    {% endblock %}
+
+  {% block title%}To-Do App sign in{% endblock %}
+
+
+{% block content %}
+
+<div class="desktop-site">
+
+    <h6 class="font-weight-bold text-danger"><em>{{form.errors}}<em></h6>
+
+    <h5 class="login-heading font-weight-bold"><em>Please Login</em></h5>
+
+<div class="container border ">
+      <div class="imgcontainer ">
+        <span  class="avatar1"><img src="/static/users/avatar2.png"  class="avatar3 center rounded-circle" alt="Avatar"/></span>
+      </div>
+    <div class="register-data #border rounded">
+        <form  method="POST">{% csrf_token%}
+            <div>
+            <p  class=" mb-0"><label class=" font-weight-bold text-italic">{{ form.username.label}}</label></p>
+            <p><span class="username-field w-100">{{ form.username}}</span></p>
+            </div>
+
+            <div>
+            <p class="mb-0"><label class=" font-weight-bold text-italic">{{ form.password.label}}<label></p>
+            <p><span class="password1-field ">{{ form.password}}</span></p>
+            </div>
+
+
+
+            <button class="btn btn-success login-btn font-weight-bold text-italic" type="submit">Log in</button><br>
+
+                <span class=" text-italic login-title">Don't have an Account? <a href="{% url 'user_register' %}" class="login-link ml-5 pl-2 pr-2 ">Sign up</a></span>
+
+        </form>
+    </div>
+  </div>
+
+</div>
+{% endblock %}

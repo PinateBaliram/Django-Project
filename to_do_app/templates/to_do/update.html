@@ -1,0 +1,28 @@
+{% extends 'to_do/base.html' %}
+{% load static %}
+    {% block link%}
+        <link rel="stylesheet" type="text/css" href="{% static 'to_do/update.css' %}">
+    {% endblock %}
+
+    {% block title%}update Task{% endblock %}
+
+
+{% block content %}
+<div class="desktop-site">
+
+    <h6 class="font-weight-bold text-danger"><em>{{form.errors}}<em></h6>
+<br><h6 class=" font-weight-bold text-italic app-heading"><span class="appnext-heading"><em>Welcome to to_do Home</em></span></h6><br><br>
+
+<div class="container  border  border-info rounded">
+    <div class=" ">
+        <form action="" class="form-data" method="POST" class=" " >{% csrf_token%}
+            <br><lable class="form-title-label"> Task: </lable><span class="">{{form.title}}</span><br>
+            <div class="form-complete"><lable class="form-complete-label" >Complete: </lable><span class="form-complete-box">{{form.complete}}</span></div><br>
+            <br><button class="btn btn-success btn-sm update-btn" type='submit'>Update</button>
+        </form>
+
+    </div>
+</div>
+
+</div>
+{% endblock %}

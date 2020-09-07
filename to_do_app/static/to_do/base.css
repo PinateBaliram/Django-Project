@@ -1,0 +1,50 @@
+    body{
+        background-color:black;
+    }
+    .nav-bg{
+        background-color:  black;
+    }
+    .nav-brand{
+            background-color:turquoise;
+            padding-left:10px;
+            padding-right:10px;
+            padding-top:2px;
+            padding-bottom:0px;
+            border:solid 2px turquoise;
+            border-radius: 2px;
+        }
+
+        .navbar-toggler-icon{
+            color:black;
+        }
+        .msg{
+
+            text-align:center;
+            color:green;
+
+        }
+
+        .nav-link:hover {
+            color:red;
+            background-color: orange;
+
+        }
+
+        @media only screen and (min-width: 768px) {
+            .navbar{
+                font-size:14px;
+                color:white;
+
+            }
+
+            .navbar-nav{
+                float:right !important;
+            }
+
+            .app-heading{
+                font-size:18px !important;
+
+            }
+
+        }
+

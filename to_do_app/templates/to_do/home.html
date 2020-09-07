@@ -1,0 +1,39 @@
+{% extends 'to_do/base.html' %}
+
+{% load static %}
+    {% block link%}
+        <link rel="stylesheet" type="text/css" href="{% static 'to_do/home.css' %}">
+    {% endblock %}
+
+    {% block title%}To-do App{% endblock %}
+
+    {% block content %}
+<div class="desktop-site">
+
+    <br><h6 class=" font-weight-bold text-italic app-heading"><span class="appnext-heading"><em>Welcome to To_Do Home</em></span></h6>
+
+    <br><div class="container border border-info rounded body-bg"><br>
+
+        <div class="task-form">
+            <form action="" method="POST">{% csrf_token%}
+                <p class="w-90">{{form.title}}</p>
+                <button class="btn  text-dark font-weight-bold text-italic addtask-btn" type="submit" >Add Task</button>
+            </form>
+        </div>
+    {% for task in tasks %}<br>
+        <div class=" border border-info rounded task-data">
+
+                <a href="{% url 'task_update' task.id%}" class="btn btn-success  font-weight-bold text-italic btn-sm update-btn">Edit</a>&nbsp; <a href="{% url 'task_delete' task.id%}" class="btn btn-danger  font-weight-bold text-italic btn-sm delete-btn">Delete</a>
+
+            {% if task.complete == True %}
+
+                <strike class=" font-weight-bold task-title ml-3"><em>{{task.title}}</em></strike>
+                {% else %}
+                <span class=" font-weight-bold task-title ml-3"><em>{{task.title}}</em></span>
+                {% endif %}
+
+        </div>
+    {% endfor %}
+    <br></div>
+</div>
+{% endblock %}

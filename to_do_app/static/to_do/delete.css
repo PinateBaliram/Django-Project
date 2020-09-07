@@ -1,0 +1,36 @@
+.delete-title{
+    margin-top:100px;
+    text-align:center;
+    color:white;
+
+}
+
+.delete-btn{
+    text-align:center;
+    margin-top:20px;
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+
+    
+    }
+    .delete-title{
+        font-size:24px;
+    }
+
+    .del-btn{
+        font-size:18px;
+    }
+
+    .canl-btn{
+        font-size:18px;
+    }
+
+
+
+}
+
+

@@ -1,0 +1,48 @@
+{% extends "to_do/base.html"%}
+{% load crispy_forms_tags %}
+{% load static %}
+    {% block link%}
+        <link rel="stylesheet" type="text/css" href="{% static 'users/profile.css' %}">
+    {% endblock %}
+
+    {% block title%}users profile{% endblock %}
+
+
+{% block content %}
+<div class="desktop-site">
+
+    <div class="container">
+        <div class=" border border-info rounded-lg profile-data fixed"><br><br>
+            <img class="rounded-circle border border-dark img center" src="{{user.profile.image.url}}">
+            <p class="font-weight-bold profile-username"><h5 class="username"><em>{{user.username}}</em></h5></p><br>
+
+
+
+
+        <form method="POST" enctype="multipart/form-data">{% csrf_token %}
+            <fieldset>
+                <div>
+                    <label class="username_label font-weight-bold">{{u_form.username.label}}</label>
+                    <span class="email_field ml-2">{{u_form.username}}</span>
+
+                </div>
+                <div class="email_data mt-2">
+                    <label class="email_label font-weight-bold">{{u_form.email.label}}<label>
+                    <span class="email_field ml-5">    {{ u_form.email}}</span>
+                </div>
+                {% for field in p_form  %}
+                    {{ field.errors }}
+                    <li> {{ field }} </li>
+                {% endfor %}
+
+
+
+                </fieldset><br>
+
+            <button type="submit" class=" btn update-btn border border-dark"><h6 class="update-btn-name"><b>update</b></h6></button><br><br><br><br>
+        </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

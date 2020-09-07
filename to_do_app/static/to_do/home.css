@@ -1,0 +1,73 @@
+    .app-heading{
+
+        text-align:center;
+        }
+
+    .appnext-heading{
+            background-color:turquoise;
+            padding-left:50px;
+            padding-right:50px;
+            padding-top:5px;
+            padding-bottom:5px;
+            border:solid 2px turquoise;
+            border-radius: 10px;
+        }
+
+    .body-bg{
+        max-width:600px;
+        border-style: groove;
+
+    }
+
+    input{
+        width:100%;
+        margin-top:10px;
+        height:35px;
+        border: none;
+        border:solid 2px turquoise;
+        border-radius: 10px;
+    }
+
+    .addtask-btn{
+        width:100%;
+        background-color:turquoise;
+        border: none;
+        border:solid 2px turquoise;
+        border-radius: 10px;
+
+    }
+
+    .task-data{
+        border-left:2px red;
+        background-color:black;
+
+    }
+
+    .update-btn{
+        background-color:;
+        margin-left:10px;
+        margin-top:5px;
+        margin-bottom:10px;
+
+    }
+
+    .delete-btn{
+        background-color:;
+        margin-left:10px;
+        margin-top:10px;
+        margin-bottom:10px;
+
+    }
+
+    .task-title{
+        margin-left:10px;
+        margin-top:150px;
+        color:white;
+    }
+
+
+@media only screen and (min-width: 768px) {
+
+
+   
+}

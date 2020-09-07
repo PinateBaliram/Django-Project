@@ -1,0 +1,25 @@
+{% extends 'to_do/base.html' %}
+
+{% load static %}
+    {% block link%}
+        <link rel="stylesheet" type="text/css" href="{% static 'to_do/delete.css' %}">
+    {% endblock %}
+
+    {% block title%}Delete Task{% endblock %}
+
+
+{% block content %}
+
+<div class="desktop-site">
+    <div class=" justify-content-center container ">
+        <form action="" method="POST">{% csrf_token%}
+            <h6 class="delete-title"><em>Are sure want to delete this Task?</em></h6>
+            <div class="delete-btn">
+                <button class="btn btn-danger btn-sm del-btn" type='submit'>Delete</button>&nbsp;&nbsp;
+                <a href="{% url 'to_do_home' %}" class="btn btn-success btn-sm canl-btn" >Cancle</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

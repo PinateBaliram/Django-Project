@@ -1,0 +1,53 @@
+{% extends "to_do/base.html"%}
+{% load static %}
+    {% block link%}
+        <link rel="stylesheet" type="text/css" href="{% static 'users/register.css' %}">
+    {% endblock %}
+
+    {% block title%}Sign up{% endblock %}
+
+
+{% block content %}
+
+<div class="desktop-site">
+
+    <h6 class="font-weight-bold text-danger"><em>{{form.errors}}<em></h6>
+
+    <h5 class="register-heading font-weight-bold"><em>Please Sign Up</em></h5>
+
+<div class="container border">
+      <div class="imgcontainer ">
+        <span  class="avatar1"><img src="/static/users/avatar2.png"  class="avatar3 center rounded-circle" alt="Avatar"/></span>
+
+      </div>
+    <div class="register-data #border rounded">
+        <form  method="POST">{% csrf_token%}
+            <div>
+            <p  class=" mb-0"><label class=" font-weight-bold text-italic ">{{ form.username.label}}</label></p>
+            <p><span class="username-field w-100">{{ form.username}}</span></p>
+            </div>
+
+            <div class="">
+            <p class="mb-0"><label class=" font-weight-bold text-italic">Email<label></p>
+            <p><span class="email-field ">{{ form.email}}</span></p>
+            </div>
+
+            <div>
+            <p class="mb-0"><label class=" font-weight-bold text-italic">{{ form.password1.label}}<label></p>
+            <p><span class="password1-field ">{{ form.password1}}</span></p>
+            </div>
+
+            <div>
+            <p class="mb-0"><label class=" font-weight-bold text-italic">confirm-password<label></p>
+            <p><span class="password1-field ">{{ form.password2}}</span></p>
+            </div>
+
+            <button class="btn btn-success btn-sm signup-btn" type="submit">Sign Up</button><br>
+            <span class=" text-italic login-title">Already have an Account? <a href="{% url 'user_login' %}" class="login-link ml-5 pl-2 pr-2 ">Login</a></span>
+
+        </form>
+    </div>
+</div>
+
+</div>
+{% endblock %}

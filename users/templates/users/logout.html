@@ -1,0 +1,43 @@
+{% extends 'to_do/base.html' %}
+
+{% block css%}
+.delete-title{
+    margin-top:100px;
+    text-align:center;
+    color:white;
+
+}
+
+.delete-btn{
+    text-align:center;
+    margin-top:20px;
+
+}
+
+@media only screen and (min-width: 768px) {
+
+
+    
+}
+
+
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="desktop-site">
+    <div class=" justify-content-center container ">
+
+            <h6 class="delete-title"><em>You have been logged out...</em></h6>
+            <div class="delete-btn">
+            <a href="{% url 'user_login' %}" class="btn btn-success btn-sm login-btn" >Login</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

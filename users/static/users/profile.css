@@ -1,0 +1,38 @@
+.profile-data{
+    text-align:center;
+    color:black;
+    margin-top:50px;
+    margin-bottom:50px;
+
+    background-color:white;
+    }
+
+.img{
+    width:125px;
+    height:125px;
+    }
+
+.profile-username{
+    color:black;
+    }
+
+.update-btn{
+    background-color:turquoise;
+    width:150px;
+    }
+
+.border{
+    border:5px;
+    }
+
+@media only screen and (min-width: 768px) {
+
+    .update-btn{
+        background-color:turquoise;
+        width:80px;
+        height:30px;
+        margin-bottom:5px;
+        }
+    
+
+}
